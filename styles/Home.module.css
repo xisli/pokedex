@@ -1,11 +1,39 @@
-.container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
+.wrapper {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: 100vh;
+  flex-direction: column;
+}
+
+.menu {
+  height: 50vh;
+  position: fixed;
+  display: flex;
+  width: 100vw;
+  /* height: 50; */
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 ;
+  max-width: var(--main-content);
+}
+
+.menu button {
+  height: 3rem;
+  width: 3rem;
+  border-radius: var(--radius);
+  background: transparent;
+}
+
+.menu button:disabled:hover {
+  color: var(--gray);
+}
+
+
+.menu
+button:hover,
+.menu
+button:active {
+  color: #0070f3;
+  transition: var(--transition);
 }
 
 .main {
@@ -27,6 +55,8 @@
 }
 
 .footer a {
+  text-decoration: none;
+  color: var(--fg);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,20 +83,12 @@
 .title,
 .description {
   text-align: center;
+  z-index: 2;
 }
 
 .description {
   line-height: 1.5;
   font-size: 1.5rem;
-}
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
 .grid {
@@ -79,6 +101,9 @@
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 1rem;
   padding: 1.5rem;
   text-align: left;
@@ -87,7 +112,8 @@
   border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  width: 45%;
+  /* width: 45%; */
+  z-index: 2;
 }
 
 .card:hover,
@@ -100,6 +126,7 @@
 .card h2 {
   margin: 0 0 1rem 0;
   font-size: 1.5rem;
+  text-align: center;
 }
 
 .card p {
